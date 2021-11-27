@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+	<!--font link-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+	<title>Lifetrackr</title>
+	<style type="text/css">
+		.b:hover {cursor: pointer;}
+		.button_img div:hover {cursor: pointer;}
+
+		@media (max-width: 539px) {
+			#wrap {width: 100%;}
+
+			#wrap header {width: 100%; background-color: #7d71d3; box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 10%); z-index: 10; transition: 0.3s ease; position: relative; z-index: 1; padding: 5px 0; position: fixed;}
+
+			header .container {width: 100%;}
+			.container {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0 auto;}
+
+			.logo {width: 154px; height: 38px;background-image: url(img/logo.png); background-size: cover; margin: 5px 0 0 0; margin-left:40px;}
+
+			.hamburger_button {width: 40px; height: 30px;background-image: url(img/hamburger-button.png); background-size: cover; background-position: center; margin-right:40px; margin: 10px 40px 0 0;}
+
+			nav {width: 100%; display: block;}
+			nav ul {display: flex; flex-flow: column; background-color: #7d71d3; text-align: center;}
+			nav ul li {padding: 18px 15px;}
+			nav li a {color: #fff; text-decoration: none; background-color: #7d71d3; font-size: 13px;}
+
+			.main_banner {max-width: 100%; padding: 170px 0 145px;background-image: url(img/banner-bg.jpg); background-size: cover; color: #fff;}
+
+			.main_banner_info {width: 96%; display: flex; flex-direction:row; justify-content: center;}
+
+			.text h1 {font-size: 60px; margin: 0; line-height: 90px; font-weight: 500px; letter-spacing: 0.06em;}
+			.text p {margin: 20px 0; font-size: 20px;}
+
+			.button_img {display: flex; flex-direction: column; margin: 90px 0 60px 0;}
+			.button_img .google_play {display: inline-block; width: 241px; height: 80px; background-image: url(img/google-play.png); background-size: cover; z-index: 10; margin-bottom: 10px;}
+			.button_img .apple_store {display: inline-block; width: 241px; height: 80px; background-image: url(img/app-store.png); background-size: cover;}
+
+			.main_banner_info_top {width: 100%;}
+			.main_banner_info_top img {max-width: 100%;}
+
+			.main_banner_center_1 {width: 100%; background-image: url(img/elipse-bg.png); padding: 100px 0; background-size: cover;}
+
+			.center_1 {}
+
+			.center_wrap {display: flex; flex-flow: column;}
+			
+			.box {margin: 30px 0; box-shadow: 0px 20px 30px 0px rgb(0 0 0 / 5%);}
+			
+			.info1 {background-color: #fff; padding: 30px;}
+			.info2 {background-color: #7d71d3; padding: 30px;}
+			.info3 {background-color: #fff; padding: 30px;}
+
+		}
+
+		@media (min-width:540px) {
+			#wrap {width: 100%;}
+
+			#wrap header {width: 100%; height: auto; background-color: #7d71d3; box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 10%); z-index: 10; transition: 0.3s ease; position: relative; z-index: 1; padding: 5px 0; position: fixed;}
+
+			header .container {width: 100%;}
+			.container {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0 auto;}
+
+			.logo {width: 154px; height: 38px;background-image: url(img/logo.png); background-size: cover; margin: 5px 0 0 0; margin-left:40px;}
+
+			.hamburger_button {width: 40px; height: 30px;background-image: url(img/hamburger-button.png); background-size: cover; background-position: center; margin-right:40px; margin: 10px 40px 0 0;}
+
+			nav {width: 100%; display: block;}
+			nav ul {display: flex; flex-flow: column; background-color: #7d71d3; text-align: center;}
+			nav ul li {padding: 18px 15px;}
+			nav li a {color: #fff; text-decoration: none; background-color: #7d71d3; font-size: 13px;}
+
+			.main_banner {max-width: 100%; padding: 170px 0 145px;background-image: url(img/banner-bg.jpg); background-size: cover; color: #fff;}
+			.main_banner_info {width: 96%; display: flex; flex-direction:row; justify-content: center;}
+
+			.text h1 {font-size: 60px; margin: 0; line-height: 90px; font-weight: 500px; letter-spacing: 0.06em;}
+			.text p {margin: 20px 0; font-size: 20px;}
+
+			.button_img {display: flex; flex-direction: row; margin: 90px 0 60px 0;}
+			.button_img .google_play {display: inline-block; width: 241px; height: 80px; background-image: url(img/google-play.png); background-size: cover; z-index: 10; margin-right: 5px;}
+			.button_img .apple_store {display: inline-block; width: 241px; height: 80px; background-image: url(img/app-store.png); background-size: cover;}
+
+			.main_banner_info_top {width: 100%;}
+			.main_banner_info_top img {max-width: 100%;}
+
+			.main_banner_center_1 {width: 100%; background-image: url(img/elipse-bg.png); padding: 100px 0; background-size: cover;}
+
+			.center_1 {}
+
+			.center_wrap {display: flex; flex-flow: column;}
+			
+			.box {margin: 30px 0; box-shadow: 0px 20px 30px 0px rgb(0 0 0 / 5%);}
+			
+			.info1 {background-color: #fff; padding: 30px;}
+			.info2 {background-color: #7d71d3; padding: 30px;}
+			.info3 {background-color: #fff; padding: 30px;}
+		}
+
+		@media (min-width: 750px) {
+			#wrap {width: 100%;}
+
+			#wrap header {width: 100%; background-color: #7d71d3; box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 10%); transition: .3s ease; position: relative; z-index: 1; padding: 5px 0; position: fixed;}
+
+			header .container {width: 750px;}
+			.container {width: 100%; display: flex; flex-wrap: nowrap; justify-content: space-between; margin: 0 auto;}
+
+			.logo {width: 154px; height: 38px;background-image: url(img/logo.png); background-size: cover; margin: 5px 0 0 0;}
+
+			nav {width: auto; display: block;}
+			nav ul {display: flex; flex-direction: row; text-align: center;}
+			nav ul li {padding: 18px 15px;}
+			nav li a {color: #fff; text-decoration: none; background-color: #7d71d3; font-size: 13px;}
+
+			.main_banner {max-width: 100%; padding: 150px 0 145px;background-image: url(img/banner-bg.jpg); background-size: cover; color: #fff;}
+			.main_banner_info {width: 700px;display: flex; flex-direction:row; justify-content: center;}
+			.main_banner_info .text {width: 80%; padding: 0px 0 0 0;}
+			.text h1 {font-size: 60px; margin: 0; line-height: 90px; font-weight: 500px; letter-spacing: 0.06em;}
+			.text p {margin: 20px 0; font-size: 20px;}
+
+			.button_img {display: flex; flex-direction: row;}
+			.button_img .google_play {display: inline-block; width: 241px; height: 80px; background-image: url(img/google-play.png); background-size: cover; z-index: 10; margin-right: 20px; margin-bottom: 20px;}
+			.button_img .apple_store {display: inline-block; width: 241px; height: 80px; background-image: url(img/app-store.png); background-size: cover;}
+
+			.main_banner_info_top {width: 40%; text-align: center; margin-left: 10px;}
+			.main_banner_info_top img {max-width: 100%;}
+
+			.main_banner_center_1 {width: 100%; background-image: url(img/elipse-bg.png); padding: 100px 0; background-size: cover;}
+
+			.center_1 {}
+
+			.center_wrap {display: flex; flex-flow: column;}
+			
+			.box {margin: 30px 0; box-shadow: 0px 20px 30px 0px rgb(0 0 0 / 5%);}
+			
+			.info1 {background-color: #fff; padding: 30px;}
+			.info2 {background-color: #7d71d3; padding: 30px;}
+			.info3 {background-color: #fff; padding: 30px;}
+		}
+
+		@media (min-width: 920px) {
+			#wrap {width: 100%;}
+
+			#wrap header {width: 100%;  height: 50px; background-color: #7d71d3; box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 10%); transition: 0.3s ease; position: relative; z-index: 1; padding: 5px 0; position: fixed;}
+
+			header .container {width: 800px;}
+
+			.container {width: 100%; display: flex; flex-wrap: nowrap; justify-content: space-between; margin: 0 auto;}
+
+			.logo {width: 154px; height: 38px;background-image: url(img/logo.png); background-size: cover; margin: 5px 0 0 0;}
+
+			nav {width: auto; display: inline-block;}
+			nav ul {display: flex; flex-direction: row; text-align: center;}
+			nav ul li {padding: 18px 15px;}
+			nav li a {color: #fff; text-decoration: none; background-color: #7d71d3; font-size: 13px;}
+
+			.main_banner {max-width: 100%; padding: 170px 0 145px;background-image: url(img/banner-bg.jpg); background-size: cover; color: #fff;}
+			.main_banner_info {width: 900px;display: flex; flex-direction:row; justify-content: center;}
+
+			.main_banner_info .text {width: 60%; padding: 40px 0 0 0; margin-left:2px;}
+			.text h1 {font-size: 60px; margin: 0; line-height: 90px; font-weight: 500px; letter-spacing: 0.06em;}
+			.text p {margin: 20px 0; font-size: 20px;}
+
+			.button_img {display: flex; flex-direction: row;}
+			.button_img .google_play {display: inline-block; width: 241px; height: 80px; background-image: url(img/google-play.png); background-size: cover; z-index: 10; margin-right: 20px;}
+			.button_img .apple_store {display: inline-block; width: 241px; height: 80px; background-image: url(img/app-store.png); background-size: cover;}
+
+			.main_banner_info_top {width: 30%; text-align: center;}
+			.main_banner_info_top img {max-width: 80%; }
+
+			.main_banner_center_1 {width: 100%; background-image: url(img/elipse-bg.png); padding: 100px 0; background-size: cover;}
+
+			.center_1 {}
+
+			.center_wrap {display: flex; flex-flow: column;}
+			
+			.box {margin: 30px 0; box-shadow: 0px 20px 30px 0px rgb(0 0 0 / 5%);}
+			
+			.info1 {background-color: #fff; padding: 30px;}
+			.info2 {background-color: #7d71d3; padding: 30px;}
+			.info3 {background-color: #fff; padding: 30px;}
+		}
+
+		@media (min-width: 1140px) {
+			#wrap {width: 100%;}
+			.b {display: none;}
+
+			#wrap header {width: 100%; height: 50px; background-color: #7d71d3; box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 10%); transition: .3s ease; z-index: 1; padding: 5px 0; position: fixed;}
+
+			header .container {width: 1100px;}
+
+			.container {width: 1100px;display: flex; flex-wrap: nowrap; justify-content: space-between; margin: 0 auto; padding:0 10px;}
+
+			.logo {width: 154px; height: 38px;background-image: url(img/logo.png); background-size: cover; margin: 5px 0 0 0;}
+
+			nav {width: auto; display: inline-block;}
+			nav ul {display: flex; flex-direction: row; text-align: center;}
+			nav ul li {padding: 18px 15px;}
+			nav li a {color: #fff; text-decoration: none; background-color: #7d71d3; font-size: 13px;}
+
+			.main_banner {max-width: 100%; padding: 110px 0 180px;background-image: url(img/banner-bg.jpg); background-size: cover; color: #fff;}
+
+			.main_banner_info {width: 1100px;display: flex; flex-direction:row; justify-content: center;}
+
+			.text {width: 100%; padding: 150px 0 0 0;}
+
+			.text h1 {font-size: 60px; margin: 0; line-height: 90px; font-weight: 500px; letter-spacing: 0.06em;}
+			.text p {margin: 20px 0; font-size: 20px;}
+
+			.button_img {display: flex; flex-direction: row;}
+			.button_img .google_play {display: inline-block; width: 241px; height: 80px; background-image: url(img/google-play.png); background-size: cover; margin-right: 20px;}
+			.button_img .apple_store {display: inline-block; width: 241px; height: 80px; background-image: url(img/app-store.png); background-size: cover;}
+
+			.main_banner_info_top {width: 50%; text-align: center;}
+			.main_banner_info_top img {max-width: 100%;}
+
+			.main_banner_center_1 {width: 100%; background-image: url(img/elipse-bg.png); padding: 100px 0; background-size: cover;}
+
+			.center_img_wrap {width: 100%; }
+			.center_img_wrap img {max-width: 82%;}
+
+			.center_wrap {display: flex; flex-flow: column; padding-top: 20px;}
+			
+			.box {margin: 30px 0; box-shadow: 0px 20px 30px 0px rgb(0 0 0 / 5%);}
+			.box div {padding-right: 30px;}
+			.box img {width: 50px; float: left;}
+			.box h3 {font-family: "Open Sans", sans-serif; display: inline-block; font-size: 20px; margin: 10px 0; font-weight: bold; font-size: 20px;}
+			.box p {line-height: 30px; font-size: 14px;}
+			.box {display: flex; flex-flow: row;}
+
+
+			.box:nth-child(2) {color: #fff;}
+
+			
+			.info1 {background-color: #fff; padding: 30px; color: #5e5e5e;}
+			.info2 {background-color: #7d71d3; padding: 30px;}
+			.info3 {background-color: #fff; padding: 30px; color: #5e5e5e;}
+
+			.bg_img {padding: 100px 0; width: 100%; text-align: center;}
+
+			.center2_text {padding-bottom:100px;}
+			.center2_text h1 {font-family: "Josefin Sans", sans-serif; font-size: 48px; color: #5e5e5e;}
+			.center2_text p {color: #999999; display: inline-block; width: 50%; line-height: 30px;}
+
+			.center_2 {display: flex; flex-flow: row; align-items:center; background-image: url(img/elipse-bg-three.png); background-repeat: no-repeat; background-position: center;}
+
+			.center2_info_left {display: flex; flex-flow: column;}
+
+			.b1 {float: right;}
+
+			.center2_info_center {display: flex; flex-flow: column;}
+
+			.center2_info_right {display: flex; flex-flow: column;}
+
+			.center2_box {width: 350px; margin: 30px 0;}
+			.center2_box img {width: 50px;}
+			.center2_box h3 {font-family: "Open Sans", sans-serif;inline-block; font-size: 20px; margin: 10px 0; font-weight: bold; font-size: 20px; color: #5e5e5e;}
+			.center2_box p {line-height: 30px; font-size: 14px;}
+
+			.vd_bg {position: relative; width: 100%; background-image: url(img/desk-bg.jpg); padding: 100px 0; background-repeat: no-repeat;background-size: cover; background-attachment: fixed;}
+			.vd_bg:before {content: ''; background: rgba(125, 113, 211, 0.9); position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+
+			.video_wrap {margin: 0 auto; position: relative; width: 100%; height: 487px;background-image: url(img/promo-video-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; border-radius: 10px;}
+			.wrap_flex {display: flex; align-items: center; justify-content: center;}
+
+			.video_button {position: relative; top: 0; content: ''; height: 130px; width: 130px; border-radius: 100%; background: rgba(125, 113, 211, 0.5);}
+			.video_button:before {content: ''; height: 100px; width: 100px; border-radius: 100%; background: rgba(125, 113, 211, 0.7); position: absolute; left: 12%; top: 12%; z-index: 500;}
+
+			.video_button_icon {position: relative; height: 70px; width: 70px; font-size: 35px; background: #7d71d3; border-radius: 100%; left: 24%; top: 24%;}
+			.play_button {position: relative; left: 28%; top: 18%; color: #fff; font-weight: bold; z-index: 500;}
+			.video iframe {position: absolute; width: 100%; height: 100%; display: none;}
+
+		}
+
+	</style>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		(function ($) {'use strict';
+			$(document).ready(function () {
+				$(".b").click(function(){
+					$(".a").slideToggle();
+				});
+
+				$(window).resize(function(){
+					if (window.innerWidth>=751) {
+						$(".a").show();
+						$(".b").hide();
+					}
+					else {
+						$(".a").hide();
+						$(".b").show();
+					}
+				});
+			$('.play_button').click(function() {
+				var video = '<iframe allowfullscreen src="' + $(this).attr('data-video') + '"></iframe>';
+				$(this).replaceWith(video);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="container">
+				<div class="logo"></div>
+				<div class="hamburger_button b"></div>
+				<nav class="a">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">ABOUT</a></li>
+						<li><a href="#">FEATURES</a></li>
+						<li><a href="#">PRICING</a></li>
+						<li><a href="#">TEAM</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="main_banner">
+			<div class="main_banner_top container">
+				<div class="text">
+
+					<h1>AMAZING APP BEST FOR BUSINESS</h1>
+					<p>LET YOU TRACK EVERYTHING IN YOUR LIFE WITH A SIMPLE WAY</p>
+
+					<div class="button_img">
+						<div class="google_play"></div>
+						<div class="apple_store"></div>
+					</div>
+				</div>
+				<div class="main_banner_info_top">
+					<img src="img/iphone-banner.png">
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="main_banner_center_1">
+				<div class="center_1 container">
+					<div class="center_img_wrap">
+						<img src="img/iphone-feature.png">
+					</div>
+					<div class="center_wrap">
+						<div class="info1 box">
+							<div>
+								<img src="img/news.png">
+							</div>
+							<div>
+								<h3>CREATIVE DESIGN</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete accounta</p>
+							</div>
+						</div>
+						<div class="info2 box">
+							<div>
+								<img src="img/earth-globe.png">
+							</div>
+							<div>
+								<h3>CREATIVE DESIGN</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete accounta</p>
+							</div>
+						</div>
+						<div class="info3 box">
+							<div>
+								<img src="img/compass.png">
+							</div>
+							<div>
+								<h3>BEST USER EXPERIENCE</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete accounta</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="bg_img">
+					<div class="center2_text">
+						<h1>App Features</h1>
+						<p>Demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee idea of denouncing pleasure and praising</p>
+					</div>
+					<div class="center_2 container">
+						<div class="center2_info_left">
+							<div class="center2_box b1">
+								<img src="img/compass.png">
+								<h3>BEAUTIFUL INTERFACE DESIGN</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
+							</div>
+							<div class="center2_box b1">
+								<img src="img/tools.png">
+								<h3>UNLIMITED FEATURES</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
+							</div>
+						</div>
+						<div class="center2_info_cneter">
+							<div class="center2_box b2">
+								<img src="img/chat.png">
+								<h3>FULL FREE CHAT</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
+							</div>
+
+							<img src="img/i-phone-screen.png">
+
+							<div class="center2_box b2">
+								<img src="img/hourglass.png">
+								<h3>24/7 SUPPORT BY REAL PEOPLE</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
+							</div>
+						</div>
+						<div class="center2_info_right">
+							<div class="center2_box b3">
+								<img src="img/device.png">
+								<h3>RETINA READY GREAPHICS</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
+							</div>
+							<div class="center2_box b3">
+								<img src="img/book.png">
+								<h3>IOS & ANDROID VERSION</h3>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="vd_bg">
+				<div class="container">
+					<div class="video_wrap wrap_flex">
+						<div class="video_button">
+							<div class="video_button_icon">
+								<div class="play_button">
+									▷
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+	</html>
